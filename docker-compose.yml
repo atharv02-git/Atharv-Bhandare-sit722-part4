@@ -10,7 +10,7 @@ services:
     container_name: book_catalog
     environment:
       - PORT=8000
-      - DATABASE_URL=postgresql://sit722projectpart3_user:kk7ISoQi57rijke66eJPXJbTV8Xe6FQJ@dpg-crjutnl2ng1s73flchbg-a.oregon-postgres.render.com/sit722projectpart3
+      - DATABASE_URL=postgresql://sit722projectpart4_user:91sVs60U]f4Qp4tNhc8H1zI0rdoH8n1t@dpg-crnspig8fa8c738ke8ng-a.oregon-postgres.render.com/sit722projectpart4
     restart: "no"
 
   inventory_management:
@@ -21,5 +21,5 @@ services:
     container_name: inventory_management
     environment:
       - PORT=8001
-      - DATABASE_URL=postgresql://sit722projectpart3_user:kk7ISoQi57rijke66eJPXJbTV8Xe6FQJ@dpg-crjutnl2ng1s73flchbg-a.oregon-postgres.render.com/sit722projectpart3
+      - DATABASE_URL=postgresql://sit722projectpart4_user:91sVs60U]f40p4tNhc8H1zI0rdoH8n1t@dpg-crnspig8fac738ke8ng-a.oregon-postgres.render.com/sit722projectpart4
     restart: "no"
