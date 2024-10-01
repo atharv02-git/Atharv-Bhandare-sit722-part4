@@ -1,10 +1,10 @@
 #
-#Creates a managed kubernetes cluster on Azure
+# Creates a managed kubernetes cluster on Azure
 #
 resource "azurerm_kubernetes_cluster" "cluster" {
   name                = var.app_name
   location            = var.location
-  resource_group_name = azurerm_resource_group.atharvsit722part5.name
+  resource_group_name = azurerm_resource_group.sit722projectpart4.name
   dns_prefix          = var.app_name
   kubernetes_version  = var.kubernetes_version
 
@@ -26,9 +26,4 @@ resource "azurerm_role_assignment" "role_assignment" {
   role_definition_name             = "AcrPull"
   scope                            = azurerm_container_registry.container_registry.id
   skip_service_principal_aad_check = true
-}
-
-output "kube_config" {
-  value = base64encode(azurerm_kubernetes_cluster.cluster.kube_config_raw)
-  sensitive = true
 }
